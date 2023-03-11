@@ -1,0 +1,5 @@
+@import url("css/fonts/montserrat.css"); /* font */
+
+* {
+ font-family: Montserrat, Interstate, Overpass, sans-serif;
+}

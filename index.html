@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html>
+    <head>
+    <title>Periodic</title>
+        <meta charset="UTF-16"/>
+        <link href="css.css" rel="stylesheet"/>
+        <link href="periodic.css" rel="stylesheet"/>
+        <link href="periodic.png" rel="shortcut icon" type="image/x-icon"/>
+        <script src="js/0.0.0.js"></script>
+        <script src="js/color/0.0.0.js"></script>
+        <script src="elements.js"></script>
+        <script src="periodic.js"></script>
+    </head>
+
+    <body>
+        <main>
+            <h1>Periodic</h1>
+    
+            <p>Use forward slashes (/) to prevent letters from combining.</p>
+            <p>Almost done...</p>
+    
+            <div class="settings-container">
+            <h2><button class="settings-button">Settings</button></h2>
+    
+            <div class="settings" data-hidden="true">
+                <h3>Dimensions</h3>
+                <div class="settings-flex settings-dimensions">
+                <div class="setting">
+                    <label>Width</label>
+                    <input class="inp-dimension dimension-width" type="number" min="100" value="115" placeholder="115"/>
+                </div>
+                <div class="setting">
+                    <label>Height</label>
+                    <input class="inp-dimension dimension-height" type="number" min="120" value="138" placeholder="138"/>
+                </div>
+                <div class="setting">
+                    <label>Padding</label>
+                    <input class="inp-dimension dimension-padding" type="number" min="0" value="4" placeholder="4"/>
+                </div>
+                </div>
+    
+                <h3>Elements</h3>
+                <div class="settings-flex settings-elements">
+                <div class="setting">
+                    <input class="elements-allowplaceholder" type="checkbox"/>
+                    <br/>
+                    <label class="small">Use placeholder elements when necessary<label>
+                </div>
+                <div class="setting">
+                    <input class="elements-allowcustom" type="checkbox" checked/>
+                    <br/>
+                    <label class="small">Use custom elements when necessary<label>
+                </div>
+                <div class="setting">
+                    <input class="elements-allowspaces" type="checkbox" checked/>
+                    <br/>
+                    <label class="small">Reserve tiles for spaces<label>
+                </div>
+                <div class="setting">
+                    <input class="elements-allowirregular" type="checkbox" checked/>
+                    <br/>
+                    <label class="small">Remove character restriction for symbols<label>
+                </div>
+                </div>
+    
+                <button class="customelements-add">Add custom element</button>
+                <label class="small">(Suggested by JumboDS64)</label>
+                <label class="small">The browser stores all custom elements (that have a set atomic symbol). They will stay even after a page refresh or navigation.</label>
+    
+                <div class="settings-customelements">
+                <ul></ul>
+                </div>
+    
+                <h3>Colors</h3>
+                <div class="setting">
+                <input class="colors-simplify" type="checkbox"/>
+                <br/>
+                <label class="small">Use same color for each categorization in a group<label>
+                </div>
+    
+                <br/>
+    
+                <div class="settings-flex settings-colors">
+                <div class="setting">
+                    <label>Nonmetals</label>
+                    <label class="small sublabel">Halogens</label>
+                    <input class="inp-color color-0" type="text" value="#ddbbbb" placeholder="#ddbbbb"/>
+                </div>
+                <div class="setting">
+                    <label>Nonmetals</label>
+                    <label class="small sublabel">Noble gases</label>
+                    <input class="inp-color color-1" type="text" value="#e7d0ce" placeholder="#e7d0ce"/>
+                </div>
+                <div class="setting">
+                    <label>Nonmetals</label>
+                    <label class="small sublabel">Other</label>
+                    <input class="inp-color color-2" type="text" value="#f1e5e3" placeholder="#f1e5e3"/>
+                </div>
+                </div>
+    
+                <div class="settings-flex settings-colors">
+                <div class="setting">
+                    <label>Metals</label>
+                    <label class="small sublabel">Alkali metals</label>
+                    <input class="inp-color color-10" type="text" value="#bbddbb" placeholder="#bbddbb"/>
+                </div>
+                <div class="setting">
+                    <label>Metals</label>
+                    <label class="small sublabel">Alkaline earth metals</label>
+                    <input class="inp-color color-11" type="text" value="#c3e1cb" placeholder="#c3e1cb"/>
+                </div>
+                <div class="setting">
+                    <label>Metals</label>
+                    <label class="small sublabel">Lanthanoids</label>
+                    <input class="inp-color color-12" type="text" value="#cbe5da" placeholder="#cbe5da"/>
+                </div>
+                <div class="setting">
+                    <label>Metals</label>
+                    <label class="small sublabel">Actinoids</label>
+                    <input class="inp-color color-13" type="text" value="#d3e9e6" placeholder="#d3e9e6"/>
+                </div>
+                <div class="setting">
+                    <label>Metals</label>
+                    <label class="small sublabel">Transition metals</label>
+                    <input class="inp-color color-14" type="text" value="#dbe9ed" placeholder="#dbe9ed"/>
+                </div>
+                <div class="setting">
+                    <label>Metals</label>
+                    <label class="small sublabel">Post-transition metals</label>
+                    <input class="inp-color color-15" type="text" value="#e3eaf1" placeholder="#e3eaf1"/>
+                </div>
+                </div>
+    
+                <div class="settings-flex settings-colors">
+                <div class="setting">
+                    <label>Metalloids</label>
+                    <input class="inp-color color-20" type="text" value="#bbbbdd" placeholder="#bbbbdd"/>
+                </div>
+                </div>
+    
+                <div class="settings-flex settings-colors">
+                <div class="setting">
+                    <label>Placeholders</label>
+                    <input class="inp-color color--1" type="text" value="#555555" placeholder="#555555"/>
+                </div>
+                </div>
+    
+                <div class="settings-flex settings-colors">
+                <div class="setting">
+                    <label>Custom</label>
+                    <input class="inp-color color--2" type="text" value="#777799" placeholder="#777799"/>
+                </div>
+                </div>
+            </div>
+    
+            <h3>Text</h3>
+            <input class="inp-text" type="text" placeholder="no thonks" value="knockoff" autofocus/>
+    
+            <div class="button-container">
+            <button class="start">Generate</button>
+            </div>
+    
+            <div class="canvas-container">
+            <canvas width="0" height="0">
+            <img src="canvasfallback.png"/>
+            </canvas>
+            </div>
+    
+            <div class="errors"></div>
+    
+            <div class="foot">Started by wooningc on April 24, 2017</div>
+            <div class="foot">All periodic table data retrieved from <a href="http://ptable.com/">http://ptable.com</a></div>
+        </main>
+    </body>
+</html>

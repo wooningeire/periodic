@@ -1,0 +1,258 @@
+* {
+ font-size: 18px;
+ text-align: center;
+
+ outline: 0;
+ color: rgba(0, 0, 0, .5);
+}
+
+body {
+ margin: 0;
+ padding: 15px;
+}
+
+h1 {
+ margin-top: 5px;
+ margin-bottom: 20px;
+
+ font-weight: 400;
+ font-size: 64px;
+ 
+ text-transform: lowercase;
+
+ color: rgba(0, 0, 0, .6);
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+main {
+ padding: 10px;
+ margin: 20px;
+}
+
+p {
+ font-size: 16px;
+ margin-bottom: 30px;
+
+ font-style: italic;
+}
+
+.settings-container {
+ margin: 30px auto;
+}
+
+.settings-button {
+  font-size: inherit;
+}
+
+.settings {
+ height: 0;
+
+ pointer-events: none;
+
+ opacity: 0;
+
+ transition:
+   height 1s ease,
+   opacity 1s ease;
+}
+
+.settings-flex {
+ display: flex;
+ width: 100%;
+ align-items: center;
+ margin-bottom: 20px;
+}
+
+.settings-flex > * {
+ margin: 0 auto;
+}
+
+.settings-flex.settings-dimensions > .setting {
+ width: 31%;
+}
+.settings-flex.settings-elements > .setting {
+ width: 23%;
+}
+.settings-flex.settings-colors > .setting {
+ width: 14%;
+}
+
+.setting {
+ margin: 10px auto auto auto;
+}
+
+.settings input[type="text"], .settings input[type="number"] {
+ max-width: 100%;
+ margin-top: 8px;
+
+ color: #000;
+ opacity: .45;
+}
+
+label {
+ display: block;
+}
+
+.settings label {
+ margin-bottom: 3px;
+}
+
+main > label {
+ margin-bottom: 20px;
+
+ font-size: 24px;
+}
+
+label.small {
+  font-size: 14px;
+}
+
+label.sublabel, .settings-colors > .setting {
+  transition:
+    opacity .5s ease,
+    width .5s ease,
+    height .5s ease;
+}
+
+.settings-customelements {
+ width: 80%;
+ margin: 0 auto;
+ height: 160px;
+ overflow-y: auto;
+ resize: vertical;
+
+ background: rgba(0, 0, 0, .02);
+}
+.customelements-add {
+ margin-bottom: 20px;
+}
+.settings-customelements > ul {
+ padding: 0;
+ margin: 0;
+}
+
+@keyframes fadein {
+ from { opacity: 0; }
+   to { opacity: 1; }
+}
+
+li.customelement {
+ list-style: none;
+ padding: 5px;
+
+ animation: fadein .5s ease;
+}
+li.customelement:nth-child(odd) {
+ background: rgba(0, 0, 0, .03);
+}
+li.customelement:nth-child(even) {
+ background: rgba(0, 0, 0, .08);
+}
+li.customelement > input {
+ margin: 0 1% auto;
+}
+li.customelement > input.customelement-sym {
+ width: 8%;
+}
+li.customelement > input.customelement-name, li.customelement > input.customelement-mass {
+ width: 38%;
+}
+button.customelement-remove, button.customelement-remove:hover, button.customelement-remove:active, button.customelement-remove:hover:active {
+ background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9Im9wYWNpdHk6IC4yOyI+PGxpbmUgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgeDE9IjUiIHkxPSI1IiB4Mj0iMjUiIHkyPSIyNSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2U9IiMwMDAiIC8+PGxpbmUgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgeDE9IjUiIHkxPSIyNSIgeDI9IjI1IiB5Mj0iNSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2U9IiMwMDAiIC8+PC9zdmc+);
+}
+button.customelement-remove {
+ height: 30px;
+ width: 30px;
+}
+
+input[type="text"], input[type="number"] {
+ border: none;
+ border-bottom: 2px solid;
+ background: none;
+}
+
+input[type="text"][disabled], input[type="number"][disabled] {
+ background-color: rgba(0, 0, 0, .2);
+}
+
+.inp-text {
+ width: 600px;
+ max-width: 80%;
+ border-bottom: #000;
+
+ color: rgba(0, 0, 0, .8);
+ opacity: .5;
+}
+
+.button-container {
+ margin: 30px;
+}
+
+button {
+ padding: 4px;
+
+ background: rgba(0, 0, 0, .05);
+ border: none;
+
+ transition: background .5s ease;
+}
+
+button:hover, button:active {
+ background: rgba(0, 0, 0, .1);
+}
+
+button:hover:active {
+ background: rgba(0, 0, 0, .2);
+}
+
+.canvas-container {
+ width: 90%;
+ margin: 0 auto;
+ overflow-x: auto;
+
+ text-align: center;
+}
+
+.errors > p:before {
+ font-weight: 700;
+
+ content: "Oh noes! ";
+}
+
+.errors > p:first-child:after {
+ content: " Try splitting some element symbols, adding custom elements, or ticking the 'Use placeholder elements when necessary' box in the settings menu to avoid this.";
+}
+
+.foot, .foot > * {
+ font-size: 12px;
+}
+
+.foot {
+ margin: 30px auto;
+ font-style: oblique;
+ font-weight: 700;
+}
+
+main > *:last-child {
+ margin-bottom: 30px;
+}
+
+[data-hidden] {
+ opacity: 0;
+ pointer-events: none;
+}
+.setting[data-hidden] {
+ display: none;
+}
+.settings[data-hidden], .sublabel[data-hidden] {
+ height: 0;
+}
